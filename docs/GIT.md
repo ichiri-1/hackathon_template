@@ -111,7 +111,7 @@ git status
 # 変更内容を確認
 git diff
 
-# ステージに追加（変更したファイルだけ指定する）
+# ステージに追加
 git add src/login.ts
 
 # コミット
