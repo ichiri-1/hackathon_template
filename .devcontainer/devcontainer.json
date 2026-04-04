@@ -43,7 +43,7 @@
     }
   },
 
-  "postCreateCommand": "bash -lc 'if [ -f /workspace/backend/pyproject.toml ]; then cd /workspace/backend && uv sync; fi && if [ -f /workspace/frontend/package.json ]; then cd /workspace/frontend && npm install; fi'",
+  "postCreateCommand": "bash -lic 'if [ -f /workspace/backend/pyproject.toml ]; then cd /workspace/backend && uv sync; fi && if [ -f /workspace/frontend/package.json ]; then cd /workspace/frontend && npm install; fi'",
 
   "postStartCommand": "bash -lc 'git config --global --add safe.directory /workspace'"
 }
