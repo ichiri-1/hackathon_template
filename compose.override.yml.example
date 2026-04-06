@@ -14,3 +14,6 @@ services:
   app:
     volumes: []
     # - ~/.claude:/home/vscode/.claude
+
+    environment:
+      - CORS_ORIGINS=http://localhost:5173

@@ -7,7 +7,7 @@ async function checkHealth(): Promise<void> {
   if (!statusEl) return;
 
   try {
-    const res = await fetch('http://localhost:8000/api/health');
+    const res = await fetch('/api/health');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const data: HealthResponse = await res.json();
