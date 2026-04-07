@@ -38,12 +38,20 @@ git clone https://github.com/{組織名}/{リポジトリ名}.git
 cd {リポジトリ名}
 ```
 
-**2. Docker Desktop を起動する**
+**2. ファイルをコピーする**
+
+```bash
+cp compose.override.yml.example compose.override.yml
+cp .env.example .env
+```
+現時点では.envは空ファイル。今後使う可能性があるので
+
+**3. Docker Desktop を起動する**
 
 タスクバー（またはアプリ一覧）から Docker Desktop を起動し、クジラのアイコンが表示されるまで待つ。
 WSLを使う場合は別途設定が必要
 
-**3. VSCode でフォルダを開く**
+**4. VSCode でフォルダを開く**
 
 ```bash
 code .
@@ -51,7 +59,7 @@ code .
 
 または VSCode の「ファイル → フォルダを開く」でクローンしたフォルダを選択する。
 
-**4. Dev Container で開く**
+**5. Dev Container で開く**
 
 VSCode の右下に通知が表示されたら「コンテナーで再度開く」をクリックする。
 
@@ -69,7 +77,7 @@ Dev Containers: Reopen in Container
 
 > 手動でのビルドコマンドは不要。
 
-**5. 動作確認**
+**6. 動作確認**
 
 コンテナが起動したら、VSCode のターミナルを2つ開いて以下を実行する。
 
