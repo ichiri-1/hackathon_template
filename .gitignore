@@ -22,3 +22,6 @@ compose.override.yml
 
 # Logs
 *.log
+
+# Claude Code
+.claude/*

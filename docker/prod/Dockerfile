@@ -23,6 +23,6 @@ COPY backend/pyproject.toml backend/uv.lock ./
 RUN uv sync --no-dev --frozen
 
 COPY backend/app ./app
-COPY --from=frontend /app/dist ./static
+COPY --from=frontend /backend/static ./static
 
 CMD ["sh", "-c", "uv run uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
