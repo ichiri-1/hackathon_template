@@ -8,8 +8,9 @@
 
 | レイヤー | 技術 |
 |---|---|
-| フロントエンド | HTML / CSS / TypeScript |
+| フロントエンド | HTML / CSS / TypeScript / React + FullCalendar|
 | バックエンド | Python / FastAPI |
+| データベース | PostgreSQL / SQLAlchemy / Alembic |
 | デプロイ | Render |
 
 ---

@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from app.api import calendar
 import os
 
 origins_str = os.getenv("CORS_ORIGINS", "")
@@ -20,5 +21,7 @@ app.add_middleware(
 def health():
     return {"status": "ok"}
 
+
+app.include_router(calendar.router)
 
 app.mount("/", StaticFiles(directory="static", html=True), name="static")

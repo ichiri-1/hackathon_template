@@ -112,7 +112,8 @@ PostgreSQL（Renderのマネージドサービス）を使用。
 | カラム | 型 | 備考 |
 |---|---|---|
 | id | PK | |
-| name | string | Q1〜Q4 |
+| term | string | Q1〜Q4 |
+| year | string | |
 | start_date | date | |
 | end_date | date | |
 
@@ -121,7 +122,7 @@ PostgreSQL（Renderのマネージドサービス）を使用。
 | カラム | 型 | 備考 |
 |---|---|---|
 | id | PK | |
-| user_id | FK → users.id | |
+| user_id | FK → users.id | 特定のユーザーに紐づく |
 | name | string | 授業名 |
 | room | string | 講義室 |
 | teacher | string | 先生名 |
@@ -142,7 +143,7 @@ PostgreSQL（Renderのマネージドサービス）を使用。
 | カラム | 型 | 備考 |
 |---|---|---|
 | id | PK | |
-| user_id | FK → users.id | |
+| user_id | FK → users.id | 特定のユーザーに紐づく |
 | title | string | |
 | date | date | |
 | start_time | time | |
