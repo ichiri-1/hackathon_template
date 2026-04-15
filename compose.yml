@@ -18,7 +18,8 @@ services:
       UV_LINK_MODE: copy
       PYTHONDONTWRITEBYTECODE: "1"
       PYTHONUNBUFFERED: "1"
-      DATABASE_URL: postgresql+psycopg://app:app@db:5432/app
+    env_file:
+      - .env
     depends_on:
       db:
         condition: service_healthy # dbのhealthcheckがokになるまでappの起動を待つ

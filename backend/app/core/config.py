@@ -10,6 +10,11 @@ class Settings(BaseSettings):
     database_url: str  # DATABASE_URLが自動代入
     cors_origins: str = ""
 
+    # JWT認証用
+    jwt_secret_key: str  # 環境変数
+    jwt_algorithm: str = "HS256"
+    jwt_expire_minutes: int = 60 * 24  # 24時間
+
 
 # モジュールインポート時に1回インスタンス化
 settings = Settings()  # type: ignore[call-arg]

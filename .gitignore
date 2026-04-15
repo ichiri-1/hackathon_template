@@ -25,3 +25,5 @@ compose.override.yml
 
 # Claude Code
 .claude/*
+
+backend/static/
